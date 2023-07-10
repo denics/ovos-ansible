@@ -3,7 +3,7 @@
 
 - name: "Install necessary software"
   ansible.builtin.apt:
-    name: 
+    name:
       - 'build-essential'
       - 'python3-dev'
       - 'python3-pip'
@@ -12,10 +12,10 @@
       - 'libssl-dev'
       - 'libfann-dev'
       - 'portaudio19-dev'
-      - 'libpulse-dev' 
-      - 'cmake' 
+      - 'libpulse-dev'
+      - 'cmake'
       - 'libncurses-dev'
-      - 'pulseaudio-utils' 
+      - 'pulseaudio-utils'
       - 'pulseaudio'
     state: present
   become: true
@@ -47,6 +47,17 @@
     virtualenv_site_packages: true
     extra_args: -f 'https://whl.smartgic.io/'
   when: "'ovos-ww-plugin-precise-lite' in ovos_ww"
+  tags:
+    - "ovos"
+    - "package"
+
+- name: "Install dependencies: libretranslate"
+  ansible.builtin.pip:
+    name: libretranslate
+    state: present
+    virtualenv: "{{ ovos_datadir }}"
+    virtualenv_site_packages: true
+  when: "'skill-ovos-fallback-chatgpt' in ovos_skills"
   tags:
     - "ovos"
     - "package"

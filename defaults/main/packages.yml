@@ -23,7 +23,6 @@ ovos_phal_plugins: []
 #  - "ovos-phal-plugin-system"
 #  - "ovos-PHAL-plugin-ipgeo"
 #  - "ovos-PHAL-plugin-oauth"
-#  - "ovos-phal-plugin-dashboard"
 #  - "ovos-phal-plugin-alsa"
 #  - "neon-phal-plugin-linear_led"
 #  - "neon-phal-plugin-switches"
@@ -59,12 +58,10 @@ ovos_gui_names:
 
 ovos_skills:
   - "ovos_skill_date_time"
-  - "ovos_skill_filebrowser"
   - "ovos_skill_naptime"
   - "ovos_skill_personal"
   - "ovos_skill_volume"
   - "ovos_skill_fallback_unknown"
-  - "ovos_skill_hello_world"
   - "ovos_skill_stop"
 
 ...

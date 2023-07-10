@@ -6,15 +6,15 @@ ovos_datadir: "/opt/ovos"
 ovos_lang: "en-en" # it-it
 # metric, imperial
 ovos_system_unit: "metric"
-# half, full 
-ovos_time_format: "half" 
+# half, full
+ovos_time_format: "half"
 # MDY, DMY
 ovos_date_format: "DMY"
 ovos_opt_in: "false"
 ovos_confirm_listening: "true"
-# /dev/shm/ovos/cache -> to keep in RAM 
+# /dev/shm/ovos/cache -> to keep in RAM
 # /tmp/ovos/cache -> to delete each reboot
-ovos_cache_path: "/tmp/mycroft/cache"  
+ovos_cache_path: "/tmp/mycroft/cache"
 # emit mycroft.ready signal when all these conditions are met
 # different setups will have different needs
 # eg, a server does not care about audio
@@ -52,5 +52,6 @@ ovos_log_level: "INFO"
 ovos_ignore_logs:
   - "enclosure.mouth.viseme"
   - "enclosure.mouth.display"
+  - "ovos_messagebus.event_handler"
 
 ...

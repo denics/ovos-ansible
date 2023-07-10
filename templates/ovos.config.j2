@@ -72,6 +72,6 @@
     {% endfor %}
   },
   "log_level": "{{ ovos_log_level }}",
-  {# "ignore_logs": "{{ ovos_ignore_logs | map('quote') | join(', ') | surround('[', ']') }}",#}
+  "ignore_logs": "{{ ovos_ignore_logs | to_json }}",
   "debug": false
 }
